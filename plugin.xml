@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.example.ui.editors.DiagramEditor"
+            contributorClass="com.example.ui.actions.DiagramActionBarContributor"
+            default="true"
+            extensions="robotTask"
+            icon="icons/ui/diagram.gif"
+            id="com.example.ui.DiagramEditor"
+            matchingStrategy="com.example.ui.editors.DiagramEditorMatchingStrategy"
+            name="Diagram Editor"/>
+   </extension>
+   
+   <extension
+          point="org.eclipse.ui.views">
+       <view
+             class="org.eclipse.ui.views.navigator.ResourceNavigator"
+             icon="icons/ui/todoitem_view.gif"
+             id="org.eclipse.ui.views.ResourceNavigator"
+             name="recource navigator">
+       </view>
+    </extension>
+   
+   
+   <extension
+      id="application"
+      point="org.eclipse.core.runtime.applications">
+     <application>
+           <run class="com.example.application.Application"/>
+     </application>
+   </extension>
+   
+   <extension 
+         point="org.eclipse.ui.perspectives">
+     <perspective 
+           id="robottaskViewer.perspective" 
+           name="RCP Perspective" 
+           class="com.example.application.Perspective"> 
+     </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            class="com.example.ui.wizards.NewDiagramWizard"
+            icon="icons/ui/diagram.gif"
+            id="robottaskviewer.newdiagramwizard"
+            name="RobotTask Diagram">
+      </wizard>
+      <wizard
+            class="com.example.ui.wizards.NewProjectWizard"
+            icon="icons/ui/project.gif"
+            id="robottaskviewer.newprojectwizard"
+            name="RobotTask Project">
+      </wizard>
+      <wizard
+            class="com.example.ui.wizards.NewFolderWizard"
+            icon="icons/ui/folder.gif"
+            id="robottaskviewer.newfolderwizard"
+            name="RobotTask Folder">
+      </wizard>
+   </extension>
+ 
+   <extension
+         point="org.eclipse.ui.ide.resourceFilters">
+      <filter
+            pattern="*.project"
+            selected="true"/>
+  </extension>
+ 
+
+   <extension
+         id="product1"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="robottask.application"
+            name="%productName">
+         <property
+               name="appName"
+               value="%productName">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/alt_about.gif">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/alt_window_16.gif,icons/alt_window_32.gif">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,252,445,20">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+  
+   <extension
+         point="org.eclipse.ui.elementFactories">
+      <factory
+            class="com.example.ui.editors.EditorInputFactory"
+            id="Gef.editor.editorInputFactory">
+      </factory>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="robottask.application"
+            name="%productName">
+         <property
+               name="appName"
+               value="%productName">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/10957.png">
+         </property>
+         <property
+               name="aboutText"
+               value="%productBlurb">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/Settings File_16.png,icons/Settings File32.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,252,445,20">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+   
+   
+</plugin>
