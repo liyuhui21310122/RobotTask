@@ -15,6 +15,7 @@ import com.example.figure.root.RotateFigure;
 import com.example.figure.root.ShiftFigure;
 import com.example.figure.root.StartFigure;
 import com.example.figure.root.WaitFigure;
+import com.example.figure.root.WhileFigure;
 import com.example.helper.ModelStringConstant;
 import com.example.model.NodeModel;
 
@@ -57,6 +58,9 @@ public class CustomFigureFactory {
 		}
 		else if(id.equals(ModelStringConstant.ID_WAIT_MODEL)){
 			return new WaitFigure();
+		}
+		else if(id.equals(ModelStringConstant.ID_WHILE_MODEL)){
+			return new WhileFigure();
 		}
 		else 
 			return new LinearMotionFigure();

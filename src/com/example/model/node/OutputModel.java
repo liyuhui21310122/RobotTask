@@ -27,7 +27,8 @@ public class OutputModel extends NonContainerModel {
 	public static final String SELECT_NAME = "name";
 	public static final String SELECT_INDEX = "index";
 	public static final String SELECT_VALUE = "value";
-	public static String index,value;
+	public String index;
+	public String value;
 	//******************************************结构体部分********************************
 	public OutputModel() {
 		super(ConstantResourceFactory.LABEL_OUTPUT_MODEL,

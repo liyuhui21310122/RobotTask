@@ -20,6 +20,7 @@ import com.example.model.node.RotateModel;
 import com.example.model.node.ShiftModel;
 import com.example.model.node.StartModel;
 import com.example.model.node.WaitModel;
+import com.example.model.node.WhileModel;
 
 
 public class CustomModelFactory {
@@ -59,6 +60,9 @@ public class CustomModelFactory {
 		}
 		else if(modelName.equals(ModelStringConstant.LABEL_WAIT_MODEL)){
 			model = new WaitModel();
+		}
+		else if(modelName.equals(ModelStringConstant.LABEL_WHILE_MODEL)){
+			model = new WhileModel();
 		}
 		return model;
 	}

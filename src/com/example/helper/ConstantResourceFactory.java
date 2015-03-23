@@ -9,7 +9,7 @@ public class ConstantResourceFactory implements ModelStringConstant,
              FigureColorConstant,FigureDimensionConstant,FigureFontConstant {
 	
 	
-	public static final String P_INDEX = "index";
+	
 	/**
 	 * color
 	 */

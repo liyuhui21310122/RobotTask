@@ -25,6 +25,7 @@ import com.example.model.node.RotateModel;
 import com.example.model.node.ShiftModel;
 import com.example.model.node.StartModel;
 import com.example.model.node.WaitModel;
+import com.example.model.node.WhileModel;
 import com.example.ui.helper.IImageKey;
 
 public class PaletteFactory {
@@ -143,6 +144,12 @@ public class PaletteFactory {
         (Application.PLUGIN_ID, IImageKey.IIMAGE_LABEL);
         tool = new CombinedTemplateCreationEntry("条件判断", "创建条件判断模块", ConditionModel.class, new SimpleFactory(
         		ConditionModel.class), image, image);
+        entries.add(tool);
+        
+//        image = AbstractUIPlugin.imageDescriptorFromPlugin
+//        (Application.PLUGIN_ID, IImageKey.IIMAGE_LABEL);
+        tool = new CombinedTemplateCreationEntry("条件循环", "创建条件循环模块，条件满足执行内部任务流程，任务不满足则跳出循环", 
+        		WhileModel.class, new SimpleFactory(WhileModel.class), image, image);
         entries.add(tool);
         
         drawer.addAll(entries);

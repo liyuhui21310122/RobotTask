@@ -60,7 +60,7 @@ public interface ModelStringConstant {
 	public static final String LABEL_LINEARMOTION_MODEL = "直线运动";
 	public static final String ID_LINEARMOTION_MODEL = "id_linearMotion_model";
 	
-	public static final String LABEL_LOOP_MODEL = "循环";
+	public static final String LABEL_LOOP_MODEL = "设定次数循环";
 	public static final String ID_LOOP_MODEL ="id_loop_model";
 
 	public static final String LABEL_START_MODEL = "初始化";
@@ -91,12 +91,16 @@ public interface ModelStringConstant {
 	public static final String LABEL_SHIFT_MODEL = "轴平移运动";
 	public static final String ID_SHIFT_MODEL ="id_shift_model";
 	
+	public static final String LABEL_WHILE_MODEL = "循环";
+	public static final String ID_WHILE_MODEL ="id_while_model";
+	
 	
 	public static final String P_MESSAGE = "message";
 	public static final String P_NUMBER = "number";
 	public static final String P_SHIFT = "shift";
 	public static final String P_ROTATE ="rotate";
 	public static final String P_BEND_POINT = "bendpoint";
-  
+	public static final String P_INDEX = "index";
+	public static final String P_CONDITION = "condition";
 	public static final String P_TIME = "time";
 }

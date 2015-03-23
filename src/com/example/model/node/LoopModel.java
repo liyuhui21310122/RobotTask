@@ -16,8 +16,8 @@ import com.example.model.ContainerModel;
 import com.example.model.ModelType;
 
 public class LoopModel extends ContainerModel {
+	private String Index,value;
 	private String count;
-	
 	public static final String SELECT_LABEL = "label";
 	public static final String SELECT_NAME = "name";
 	public static final String SELECT_COUNT = "count";
@@ -30,6 +30,8 @@ public class LoopModel extends ContainerModel {
 		// TODO Auto-generated constructor stub
 		setName("循环");
 		setCount("1");
+		//setIndex("1");
+		//setValue("0");
 	}
 	//******************************************结构体部分********************************
 
@@ -37,9 +39,10 @@ public class LoopModel extends ContainerModel {
 	
 	//******************************************属性编辑部分********************************
 	public IPropertyDescriptor[] descriptors = new IPropertyDescriptor[] {
-    	new PropertyDescriptor(SELECT_LABEL, "模型名字"),
-    		
-    	new TextPropertyDescriptor(SELECT_NAME, "名字"),
+		new TextPropertyDescriptor(SELECT_NAME, "名字"),
+		new PropertyDescriptor(SELECT_LABEL, "模型名字"),
+		//new PropertyDescriptor(SELECT_LABEL, "模型名字"),	
+    	
         new TextPropertyDescriptor(SELECT_COUNT, "执行次数"),
     };
     

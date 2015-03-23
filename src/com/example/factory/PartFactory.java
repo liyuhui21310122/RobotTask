@@ -16,6 +16,7 @@ import com.example.editpart.node.RotatePart;
 import com.example.editpart.node.ShiftPart;
 import com.example.editpart.node.StartPart;
 import com.example.editpart.node.WaitPart;
+import com.example.editpart.node.WhilePart;
 import com.example.model.ConnectionModel;
 import com.example.model.ContainerModel;
 import com.example.model.DiagramModel;
@@ -31,6 +32,7 @@ import com.example.model.node.RotateModel;
 import com.example.model.node.ShiftModel;
 import com.example.model.node.StartModel;
 import com.example.model.node.WaitModel;
+import com.example.model.node.WhileModel;
 
 
 /**
@@ -69,7 +71,8 @@ public class PartFactory implements EditPartFactory {
         	part = new InputPart();
         else if (model instanceof WaitModel) 
         	part = new WaitPart();
-        
+        else if (model instanceof WhileModel) 
+        	part = new WhilePart();
         part.setModel(model);
         return part;
     }

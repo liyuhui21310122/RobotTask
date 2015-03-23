@@ -15,4 +15,5 @@ public interface FigureDimensionConstant {
 	public static final Dimension SIZE_OUTPUT_ELEMENT = new Dimension(60,80);
 	public static final Dimension SIZE_INPUT_ELEMENT = new Dimension(60,80);
 	public static final Dimension SIZE_WAIT_ELEMENT = new Dimension(60,80);
+	public static final Dimension SIZE_WHILE_ELEMENT = new Dimension(100,100);
 } 

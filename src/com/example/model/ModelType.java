@@ -107,6 +107,13 @@ public class ModelType {
 
 	public static final String ATR_HEIGHT = "height";
 
+
+
+	public static final String ATR_CONDITION = "condition";
+
+
+
+
 	
 
 	public static String getModelXMLHead(Object model){
